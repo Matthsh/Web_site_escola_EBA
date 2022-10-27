@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <header class="head">
+            <h1><a href="./index.html">EBA</a></h1>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./institucional.html">Institucional</a></li>
+                    <li><a href="./noticias.html">Notícias</a></li>
+                    <li><a href="./fotos.html">Fotos</a></li>
+                    <li><a href="./social.html">Redes Sociais</a></li>
+                    <li><a href="./contato.html">Formulário contato</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main></main>
+</body>
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a,
+    li {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #161616;
+        height: 8vh;
+    }
+
+    header>nav,
+    header>h1 {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        gap: 10px;
+    }
+
+    .menu a {
+        padding: 10px;
+    }
+
+    .menu a:hover {
+        color: rgb(163, 205, 221);
+        transition: .3s;
+    }
+
+    main {
+        background-color: #252525;
+        background-size: cover;
+        height: 100vh;
+    }
+</style>
