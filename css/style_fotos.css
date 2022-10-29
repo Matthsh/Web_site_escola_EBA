@@ -8,14 +8,14 @@ a,
 li {
     text-decoration: none;
     list-style: none;
-    color: white;
+    color: grey;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #161616;
+    background-color: #ffffff;
     height: 8vh;
 }
 
@@ -37,12 +37,54 @@ header>h1 {
 }
 
 .menu a:hover {
-    color: rgb(163, 205, 221);
+    color: rgb(0, 0, 0);
     transition: .3s;
 }
 
 main {
     background-color: #252525;
     background-size: cover;
-    height: 100vh;
+    height: 200vh;
+    transition: 1s;
+}
+
+main:hover{
+    background: #000;
+    color: white;
+}
+section{
+    padding: 50px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+.grid div:nth-child(n + 4){
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.grid div:nth-child(n + 5) > img:hover {
+    transform: scale(1.5)
+}
+
+.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+
+.anuncio > img:hover{
+    border: 1px solid white;
+    transform: scale(0.999)
 }

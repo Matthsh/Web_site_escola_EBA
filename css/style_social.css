@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a,
@@ -45,4 +45,55 @@ main {
     background-color: #252525;
     background-size: cover;
     height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 auto;
+}
+
+.icons > div {
+    margin: 100px;
+    padding: 20px;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.icons>div:nth-child(1):hover {
+    background: linear-gradient(45deg, #1da1f2, #0e71c8);
+    box-shadow: 0 4px 30px rgba(19, 127, 212, 0.4);
+    cursor: pointer;
+    color:#252525;
+}
+
+.icons>div:nth-child(2):hover {
+    background: linear-gradient(45deg, #3b5998, #0078d7);
+    box-shadow: 0 4px 30px rgba(43, 98, 169, 0.7);
+    cursor: pointer;
+    color:#252525;
+}
+
+.icons>div:nth-child(3):hover {
+    background: linear-gradient(45deg, #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #fd1d1d);
+    box-shadow: 0 4px 30px rgba(120, 64, 190, 06);
+    cursor: pointer;
+    color:#252525;
+}
+
+.icons>div:nth-child(4):hover {
+    background: linear-gradient(45deg, #ff0000, rgb(233, 0, 0));
+    box-shadow: 0 4px 30px rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+    color:#252525;
 }

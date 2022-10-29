@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style_contato.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
 </head>
+
 <body>
     <div>
         <header class="head">
@@ -23,6 +31,39 @@
             </nav>
         </header>
     </div>
-    <main></main>
+    <main>
+        <h1>Entre em contato seguindo o mapa abaixo</h1>
+        <div id="mymap"></div>
+    </main>
+    <script>
+
+        /* Using geolocator to fetch your location */
+        let lat, lon;
+
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(async (position) => {
+                lat = position.coords.latitude;
+                lon = position.coords.longitude;
+
+                const mymap = L.map('mymap').setView([-30.048378, -51.186194], 13);
+                const attribution =
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+                const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+                const tiles = L.tileLayer(tileUrl, { attribution });
+                tiles.addTo(mymap);
+                var popup1 = L.popup()
+                    .setLatLng([-30.048378, -51.186194])
+                    .setContent("EBA Office")
+                    .addTo(mymap)
+                var popup2 = L.popup()
+                    .setLatLng([lat, lon])
+                    .setContent("Your position")
+                    .addTo(mymap)
+            });
+        } else {
+            console.log("geolocation not available")
+        };
+    </script>
 </body>
+
 </html>

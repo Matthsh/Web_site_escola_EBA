@@ -15,7 +15,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #161616;
+    background-color: #000000;
     height: 8vh;
 }
 
@@ -42,7 +42,7 @@ li {
 }
 
 main {
-    background-color: #161616;
+    background: linear-gradient(180deg, #ED1C24, #ED1C24, #5414cc, #5414cc);
     min-width: 1150px;
 }
 
@@ -144,3 +144,4 @@ main {
 .video{
     border: 5px solid #ED1C24;
 }
+
