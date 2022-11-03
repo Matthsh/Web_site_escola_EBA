@@ -79,6 +79,24 @@ main {
     border-radius: 10px;
 }
 
+.container:hover {
+    background: linear-gradient(180deg, #ED1C24, #ED1C24, #ED1C24, #5414cc, #5414cc);
+    color: white;
+    transition: 1s;
+}
+
+.container:hover p,
+.container:hover span,
+.container:hover h2{
+    color: white;
+}
+
+.container:hover .pt1,
+.container:hover .pt2{
+    border: 1px solid white;
+    transition: 1s;
+}
+
 .presentation_text{
     max-width: 1127;
 }
@@ -86,8 +104,8 @@ main {
 .pt1 {
     position: absolute;
     margin: 0 100px;
-    color: #ED1C24;
-    border: 1px solid white;
+    color: white;
+    border: 1px solid #ED1C24;
 }
 
 .titulo {
@@ -103,8 +121,8 @@ main {
 .pt2 {
     position: absolute;
     margin: 200px 100px;
-    color: #ED1C24;
-    border: 1px solid white;
+    color: white;
+    border: 1px solid #ED1C24;
 }
 
 .titulo2 {
@@ -136,6 +154,10 @@ main {
     border-radius: 10px;
 }
 
+.container:hover #insc{
+    background:#5514cc;
+}
+
 #insc:hover {
     background: #f8f8f8;
     color:black;
@@ -144,4 +166,14 @@ main {
 .video{
     border: 5px solid #ED1C24;
 }
+
+.container:hover .video:hover {
+    border: 5px solid #ED1C24;
+}
+
+.container:hover .video{
+    border: 5px solid #5514cc;
+}
+
+
 

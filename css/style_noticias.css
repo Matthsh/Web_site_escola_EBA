@@ -12,12 +12,11 @@ li {
     color: grey;
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background: rgb(95, 0, 0);
     height: 8vh;
 }
 
@@ -44,15 +43,26 @@ header>h1 {
 }
 
 main {
-    background-color: #161616;
+    background: linear-gradient(45deg, rgb(0, 0, 0), #202020);
     background-size: cover;
-    height: 110vh;
+    height: 150vh;
     color: white;
+    transition: 1s;
+}
+
+
+
+main:hover .block{
+    transition: 1s;
+    background: rgb(20, 20, 20);
 }
 
 section{
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 20px;
 }
 
 .title {
@@ -60,12 +70,14 @@ section{
     top: 30px;
     text-align: center;
     padding: 30px;
-    border: 2px solid grey;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
 }
 
 .container {
     position: relative;
     top: 50px;
+    min-width: 800px;
 }
 
 .container > div:nth-child(2) {
@@ -84,13 +96,20 @@ section{
     margin: 10px;
     padding: 10px;
     max-width: 200px;
-    background-color: black;
+    background: black;
     text-align: center;
     color: white;
 }
 
-.block:hover{
+main:hover .block:hover{
     color: rgb(76, 0, 255);
-    background-color: #252525;
+    background: url("../images/hihi.jpg") no-repeat center center;
+    cursor: pointer;
 }
 
+section img{
+    position: relative;
+    height: 600px;
+    width: 300px;
+    padding-top: 80px;
+}
